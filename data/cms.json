@@ -1,0 +1,640 @@
+{
+  "items": {
+    "inst-premium": {
+      "name": "Преміум монтаж",
+      "sku": "IN-PRM",
+      "description": "Встановлення дизайнером з підготовкою ніші та прибиранням після монтажу.",
+      "price": 10000,
+      "image": "images/inst-premium.jpeg",
+      "specs": {
+        "Термін": "1 день",
+        "Включає": "Весь комплекс",
+        "Гарантія": "36 місяців",
+        "Прибирання": "Включено"
+      },
+      "c3d": {
+        "role": "addon",
+        "position": [
+          -5,
+          -5,
+          -5
+        ],
+        "size": [
+          10,
+          0.1,
+          10
+        ],
+        "rotation": [
+          -3.15,
+          -3.15,
+          -3.15
+        ]
+      },
+      "_i18n": {
+        "ru": {
+          "name": "Премиум монтаж",
+          "description": "Установка дизайнером с подготовкой ниши и уборкой после монтажа."
+        },
+        "en": {
+          "name": "Premium installation",
+          "description": "Designer installation with niche preparation and post-install cleanup."
+        }
+      },
+      "gallery": [
+        "images/inst-premium.jpeg"
+      ]
+    },
+    "bowl-compact": {
+      "name": "Compact 400",
+      "sku": "BW-400",
+      "description": "Компактна вбудована мийка для невеликих ванних кімнат. Кераміка преміум-класу, глибина чаші 16 см.",
+      "price": 3800,
+      "image": "images/bowl-compact.jpeg",
+      "specs": {
+        "Розмір": "400×300 мм",
+        "Глибина": "160 мм",
+        "Матеріал": "Санітарна кераміка",
+        "Монтаж": "Накладний"
+      },
+      "c3d": {
+        "role": "model",
+        "model": "models/bowl-compact.glb",
+        "position": [
+          0.13086255038485697,
+          0.4535016918077991,
+          -0.610901049783064
+        ],
+        "size": [
+          2.8608,
+          1.6963,
+          7.4765
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "_i18n": {
+        "ru": {
+          "name": "",
+          "description": "Компактная встраиваемая мойка для небольших ванных комнат. Керамика премиум-класса, глубина чаши 16 см."
+        },
+        "en": {
+          "name": "",
+          "description": "Compact built-in sink for small bathrooms. Premium ceramic, basin depth 16 cm."
+        }
+      },
+      "gallery": [
+        "images/bowl-compact.jpeg",
+        "images/bowl-compact-gallery-1780230350590.jpeg",
+        "images/bowl-compact-gallery-1780230356706.jpeg"
+      ]
+    },
+    "__scene__": {
+      "background": "#0a0e17",
+      "fog": true,
+      "fogDensity": 0.055,
+      "exposure": 1,
+      "ambient": 0.9,
+      "sun": 1.4,
+      "fill": 0.35,
+      "grid": true,
+      "sink": true,
+      "cameraY": 3.5,
+      "cameraZ": 7.5,
+      "autoRotate": true,
+      "rotateSpeed": 0.001
+    },
+    "__new__bowl__1780227728839": {
+      "name": "32432",
+      "sku": "324",
+      "description": "",
+      "price": 23,
+      "image": "images/__new__bowl__1780227728839.jpeg",
+      "specs": {},
+      "c3d": {
+        "role": "addon",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          1,
+          0.4,
+          1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "bowl-xl": {
+      "name": "XL Double 800",
+      "sku": "BW-800",
+      "description": "Широка подвійна мийка з двома чашами. Ідеально для сімейних ванних кімнат.",
+      "price": 9200,
+      "image": "images/bowl-xl.jpeg",
+      "specs": {
+        "Розмір": "800×500 мм",
+        "Глибина": "200 мм",
+        "Матеріал": "Кераміка + кварц",
+        "Монтаж": "Вбудований"
+      },
+      "c3d": {
+        "role": "model",
+        "model": "models/bowl-xl.glb",
+        "position": [
+          0.05,
+          0.96,
+          -4.8008
+        ],
+        "size": [
+          3,
+          3,
+          3
+        ],
+        "rotation": [
+          0,
+          -0.4865,
+          0
+        ]
+      },
+      "_i18n": {
+        "ru": {
+          "name": "",
+          "description": "Широкая двойная мойка с двумя чашами. Идеально для семейных ванных комнат."
+        },
+        "en": {
+          "name": "",
+          "description": "Wide double sink with two basins. Perfect for family bathrooms."
+        }
+      },
+      "gallery": [
+        "images/bowl-xl.jpeg"
+      ]
+    },
+    "__new__bowl__1780228569903": {
+      "name": "Vip",
+      "sku": "BW-01",
+      "description": "",
+      "price": 10000,
+      "image": "images/__new__bowl__1780228569903.jpeg",
+      "specs": {},
+      "c3d": {
+        "role": "addon",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          1,
+          0.4,
+          1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "faucet-classic": {
+      "name": "Classic Single",
+      "sku": "FC-CLS",
+      "description": "Однорукоятковий змішувач у класичному стилі. Хромоване покриття, кераміковий картридж 40 мм.",
+      "price": 2400,
+      "image": "images/faucet-classic.jpg",
+      "specs": {
+        "Тип": "Однорукоятковий",
+        "Покриття": "Хром",
+        "Картридж": "Кераміковий 40 мм",
+        "Тиск": "1–5 бар"
+      },
+      "c3d": {
+        "role": "addon",
+        "position": [
+          -0.0351,
+          0.2547,
+          0.065
+        ],
+        "size": [
+          1,
+          0.1,
+          1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "_i18n": {
+        "ru": {
+          "name": "",
+          "description": "Однорычажный смеситель в классическом стиле. Хромированное покрытие, керамический картридж 40 мм."
+        },
+        "en": {
+          "name": "",
+          "description": "Single-lever faucet in classic style. Chrome finish, ceramic cartridge 40 mm."
+        }
+      },
+      "gallery": [
+        "images/faucet-classic.jpg"
+      ]
+    },
+    "__new__bowl__1780240938456": {
+      "name": "Мойка",
+      "sku": "01",
+      "description": "Ти просто смотри на меня",
+      "price": 10000,
+      "image": "",
+      "specs": {},
+      "c3d": {
+        "role": "addon",
+        "model": "models/bowl-compact.glb",
+        "position": [
+          0.1418095358595317,
+          1.2244009570031789,
+          5.424992430950672
+        ],
+        "size": [
+          4.1772,
+          2.4768,
+          10.917
+        ],
+        "rotation": [
+          0,
+          1.47,
+          0
+        ]
+      },
+      "_isNew": true,
+      "_categoryId": "bowl"
+    },
+    "bowl-standard": {
+      "name": "Standard 600",
+      "sku": "BW-600",
+      "description": "Класична прямокутна раковина. Оптимальні розміри, переливний отвір.",
+      "price": 5600,
+      "image": "images/bowl-standard.jpg",
+      "specs": {
+        "Розмір": "600×450 мм",
+        "Глибина": "185 мм",
+        "Матеріал": "Вітрифікована кераміка",
+        "Монтаж": "Накладний"
+      },
+      "c3d": {
+        "role": "model",
+        "model": "models/bowl-compact__1_.glb",
+        "position": [
+          -0.010032508776458053,
+          0.4902471410378386,
+          -0.17119999104185313
+        ],
+        "size": [
+          4,
+          4,
+          4
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "_i18n": {
+        "ru": {
+          "name": "",
+          "description": "Классическая прямоугольная раковина. Оптимальные размеры, перелив."
+        },
+        "en": {
+          "name": "",
+          "description": "Classic rectangular sink. Optimal dimensions, overflow hole."
+        }
+      },
+      "gallery": [
+        "images/bowl-standard.jpg"
+      ]
+    },
+    "drain-standard": {
+      "name": "Стандартний злив",
+      "sku": "DR-STD",
+      "description": "Класичний пробковий злив із накидною гайкою. Нержавіюча сталь.",
+      "price": 650,
+      "image": "images/drain-standard.jpg",
+      "specs": {
+        "Тип": "Пробковий",
+        "Матеріал": "Нержавіюча сталь",
+        "Діаметр": "32 мм",
+        "Сифон": "У комплекті"
+      },
+      "c3d": {
+        "role": "addon",
+        "position": [
+          0.0771,
+          0.5455,
+          -0.0424
+        ],
+        "size": [
+          1,
+          1,
+          1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "_i18n": {
+        "ru": {
+          "name": "Стандартный слив",
+          "description": "Классический пробковый слив с накидной гайкой. Нержавеющая сталь."
+        },
+        "en": {
+          "name": "Standard Drain",
+          "description": "Classic plug drain with union nut. Stainless steel."
+        }
+      },
+      "gallery": [
+        "images/drain-standard.jpg"
+      ]
+    },
+    "finish-brushed": {
+      "name": "Нікель матовий",
+      "sku": "FN-NBR",
+      "description": "Матове сатинове покриття нікелем. Не залишає відбитків пальців.",
+      "price": 1800,
+      "image": "images/finish-brushed.jpg",
+      "specs": {
+        "Покриття": "PVD нікель матовий",
+        "Блиск": "Матовий",
+        "Гарантія": "15 років"
+      },
+      "c3d": {
+        "role": "finish",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1,
+          1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "_i18n": {
+        "ru": {
+          "name": "Никель матовый",
+          "description": "Матовое сатиновое покрытие никелем. Не оставляет отпечатков пальцев."
+        },
+        "en": {
+          "name": "Brushed nickel",
+          "description": "Matte satin nickel finish. Fingerprint-resistant."
+        }
+      },
+      "gallery": [
+        "images/finish-brushed.jpg"
+      ]
+    },
+    "inst-self": {
+      "name": "Без встановлення",
+      "sku": "IN-SELF",
+      "description": "Тільки комплект обладнання з інструкцією та всіма кріпленнями.",
+      "price": 0,
+      "image": "images/inst-self.jpg",
+      "specs": {
+        "Послуга": "Лише постачання",
+        "Інструкція": "UA/RU/EN",
+        "Кріплення": "У комплекті",
+        "Гарантія": "12 місяців"
+      },
+      "c3d": {
+        "role": "addon",
+        "position": [
+          0,
+          -0.8,
+          0
+        ],
+        "size": [
+          1,
+          1,
+          1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "_i18n": {
+        "ru": {
+          "name": "Без установки",
+          "description": "Только комплект оборудования с инструкцией и всеми крепежами."
+        },
+        "en": {
+          "name": "No installation",
+          "description": "Equipment kit only with manual and all fixings included."
+        }
+      },
+      "gallery": [
+        "images/inst-self.jpg"
+      ]
+    },
+    "inst-standard": {
+      "name": "Стандартне встановлення",
+      "sku": "IN-STD",
+      "description": "Монтаж майстром протягом 1–3 днів. Підключення, регулювання, перевірка.",
+      "price": 2200,
+      "image": "images/inst-standard.jpg",
+      "specs": {
+        "Термін": "1–3 дні",
+        "Включає": "Монтаж + підключення",
+        "Гарантія": "24 місяці"
+      },
+      "c3d": {
+        "role": "addon",
+        "position": [
+          0,
+          -0.78,
+          0
+        ],
+        "size": [
+          1,
+          1,
+          1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "_i18n": {
+        "ru": {
+          "name": "Стандартная установка",
+          "description": "Монтаж мастером за 1–3 дня. Подключение, регулировка, проверка."
+        },
+        "en": {
+          "name": "Standard installation",
+          "description": "Installation by a technician in 1–3 days. Connection, adjustment, testing."
+        }
+      },
+      "gallery": [
+        "images/inst-standard.jpg"
+      ]
+    },
+    "acc-mirror": {
+      "name": "Дзеркало з підсвіткою",
+      "sku": "AC-MIR",
+      "description": "Кругле LED-дзеркало ∅600 мм з сенсорним вимикачем та антизапотіванням.",
+      "price": 3400,
+      "image": "images/acc-mirror.jpg",
+      "specs": {
+        "Діаметр": "600 мм",
+        "Підсвітка": "LED 24W",
+        "Температура": "3000–6000K",
+        "Функція": "Антизапотівання"
+      },
+      "c3d": {
+        "role": "addon",
+        "position": [
+          0,
+          2.3,
+          -1.18
+        ],
+        "size": [
+          1,
+          1,
+          1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "_i18n": {
+        "ru": {
+          "name": "Зеркало с подсветкой",
+          "description": "Круглое LED-зеркало ∅600 мм с сенсорным выключателем и антизапотеванием."
+        },
+        "en": {
+          "name": "LED mirror",
+          "description": "Round LED mirror ∅600 mm with touch switch and anti-fog function."
+        }
+      },
+      "gallery": [
+        "images/acc-mirror.jpg"
+      ]
+    },
+    "faucet-tall": {
+      "name": "Tower Tall",
+      "sku": "FC-TWR",
+      "description": "Високий змішувач-вежа у скандинавському стилі. Матовий нікель, поворот 360°.",
+      "price": 4900,
+      "image": "images/faucet-tall.jpg",
+      "specs": {
+        "Тип": "Високий (310 мм)",
+        "Покриття": "Матовий нікель",
+        "Поворот": "360°",
+        "Тиск": "0.5–8 бар"
+      },
+      "c3d": {
+        "role": "addon",
+        "position": [
+          0,
+          0.8,
+          -0.92
+        ],
+        "size": [
+          1,
+          1,
+          1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "_i18n": {
+        "ru": {
+          "name": "",
+          "description": "Высокий смеситель-башня в скандинавском стиле. Матовый никель, поворот 360°."
+        },
+        "en": {
+          "name": "",
+          "description": "Tall tower faucet in Scandinavian style. Brushed nickel, 360° swivel."
+        }
+      },
+      "gallery": [
+        "images/faucet-tall.jpg"
+      ]
+    },
+    "faucet-sensor": {
+      "name": "Sensor Touch",
+      "sku": "FC-SNS",
+      "description": "Сенсорний безконтактний змішувач. Живлення від батарейок AA або мережі 220В.",
+      "price": 8700,
+      "image": "images/faucet-sensor.jpg",
+      "specs": {
+        "Тип": "Сенсорний",
+        "Покриття": "Хром + чорний матовий",
+        "Живлення": "4×AA / 220В",
+        "Захист": "IP67"
+      },
+      "c3d": {
+        "role": "addon",
+        "position": [
+          0,
+          0.38,
+          -0.9
+        ],
+        "size": [
+          1,
+          1,
+          1
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "_i18n": {
+        "ru": {
+          "name": "",
+          "description": "Сенсорный бесконтактный смеситель. Питание от батареек AA или сети 220В."
+        },
+        "en": {
+          "name": "",
+          "description": "Touchless sensor faucet. Powered by AA batteries or 220V mains."
+        }
+      },
+      "gallery": [
+        "images/faucet-sensor.jpg"
+      ]
+    }
+  },
+  "company": {
+    "name": "Wash Car",
+    "phone": "+380 44 123-45-67",
+    "email": "info@aquadesign.ua",
+    "website": "www.aquadesign.ua",
+    "currency": "₴",
+    "currencyName": "грн"
+  },
+  "draft": null
+}

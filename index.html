@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculator — Aqua Design Studio</title>
+  <link rel="stylesheet" href="style.css?v=20260531-1"/>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ══════════ LEFT — 3D viewer ══════════ -->
+  <div class="col-viewer">
+    <div class="viewer-canvas-wrap">
+      <canvas id="viewer-canvas"></canvas>
+      <div class="viewer-hint">Drag to rotate · Scroll to zoom</div>
+      <button id="btn-screenshot" class="viewer-screenshot-btn" title="Take photo">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+      </button>
+    </div>
+
+    <div class="viewer-summary">
+      <div id="summary-empty" class="summary-empty">Select a configuration →</div>
+
+      <ul id="summary-list" class="summary-list"></ul>
+
+      <div id="summary-total" class="summary-total" style="display:none">
+        <div class="total-line">
+          <span>Total excl. VAT</span>
+          <strong id="total-val">—</strong>
+        </div>
+        <div class="total-line total-vat-line">
+          <span>Incl. 20% VAT</span>
+          <span id="total-vat-val">—</span>
+        </div>
+      </div>
+
+      <div id="summary-val" class="summary-val"></div>
+
+      <div class="summary-actions">
+        <button id="btn-share" class="btn-outline" disabled>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+          </svg>
+          Share
+        </button>
+        <button id="btn-pdf" class="btn-solid" disabled>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+          </svg>
+          Save PDF
+        </button>
+      </div>
+
+      <button id="btn-reset" class="btn-reset">Reset</button>
+
+      <div id="contact-form" class="contact-form" style="display:none">
+        <p class="cf-label">Your contacts <span>(optional)</span></p>
+        <input type="text"  id="cf-name"    placeholder="Full name"/>
+        <input type="text"  id="cf-company" placeholder="Company"/>
+        <div class="cf-row">
+          <input type="tel"   id="cf-phone" placeholder="Phone"/>
+          <input type="email" id="cf-email" placeholder="Email"/>
+        </div>
+        <button id="btn-generate" class="btn-solid">Generate PDF</button>
+        <button id="btn-skip" class="btn-text">Skip and download</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ RIGHT — selectors ══════════ -->
+  <div class="col-config">
+
+    <div class="config-header">
+      <div class="config-brand">
+        <img id="company-logo" alt="" style="display:none"/>
+        <span id="company-name"></span>
+      </div>
+      <div class="config-controls">
+        <div class="lang-group" id="lang-group">
+          <button class="lang-btn" data-lang="uk">UA</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button id="theme-btn" class="icon-btn" title="Toggle theme">
+          <svg id="theme-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="selectors-list" id="selectors-list">
+      <!-- populated by JS -->
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="modal-overlay" class="modal-overlay">
+  <div class="modal">
+    <button id="modal-close" class="modal-close">✕</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.124.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.124.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.124.0/examples/js/controls/OrbitControls.js"></script>
+<script src="/api/cms.js"></script>
+<script src="i18n.js?v=20260530-10"></script>
+<script src="data.js?v=20260530-10"></script>
+<script>
+/* Apply CMS overrides from server onto CATEGORIES / COMPANY */
+(function () {
+  if (!window.__CMS__) return;
+  var ov = window.__CMS__.items   || {};
+  var co = window.__CMS__.company || {};
+  if (typeof CATEGORIES !== 'undefined') {
+    CATEGORIES.forEach(function (cat) {
+      cat.items.forEach(function (item) {
+        var o = ov[item.id]; if (!o) return;
+        var c3d = o.c3d, i18n = o._i18n, specs = o.specs;
+        var rest = Object.assign({}, o); delete rest.c3d; delete rest._i18n; delete rest.specs;
+        Object.assign(item, rest);
+        if (c3d)   item.c3d   = Object.assign({}, item.c3d,   c3d);
+        if (i18n)  item._i18n = Object.assign({}, item._i18n, i18n);
+        if (specs) item.specs = Object.assign({}, item.specs,  specs);
+      });
+    });
+  }
+  if (typeof COMPANY !== 'undefined') Object.assign(COMPANY, co);
+  // Inject new products created through admin
+  if (typeof CATEGORIES !== 'undefined') {
+    Object.entries(ov).forEach(function(entry) {
+      var id = entry[0], item = entry[1];
+      if (!item || !item._isNew) return;
+      var cat = CATEGORIES.find(function(c) { return c.id === item._categoryId; });
+      if (!cat) return;
+      if (cat.items.some(function(i) { return i.id === id; })) return;
+      cat.items.push({
+        id: id, name: item.name || id, sku: item.sku || id,
+        price: item.price || 0, description: item.description || '',
+        image: item.image || '', c3d: item.c3d || {},
+        specs: item.specs || {}, _i18n: item._i18n || {},
+        incompatible: [],
+      });
+    });
+  }
+  // Expose scene settings for viewer.js to pick up
+  window.__CMS_SCENE__ = window.__CMS__.items?.__scene__ || null;
+})();
+</script>
+<script src="viewer.js?v=20260530-10"></script>
+<script src="app.js?v=20260530-10"></script>
+</body>
+</html>
