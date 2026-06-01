@@ -1,1 +1,0 @@
-# NVP_CALCULATOR
